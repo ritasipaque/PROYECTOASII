@@ -13,7 +13,7 @@ import Capa.Datos.Usuarios;
 public class menu extends javax.swing.JFrame {
 
     Usuarios mod;
-
+private Vacunas1 frmVacunas;
     public menu() {
         initComponents();
     }
@@ -43,6 +43,7 @@ public class menu extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        VacunasMenu = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
@@ -76,6 +77,14 @@ public class menu extends javax.swing.JFrame {
         jMenuItem1.setText("jMenuItem1");
         jMenu1.add(jMenuItem1);
 
+        VacunasMenu.setText("Vacunas");
+        VacunasMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VacunasMenuActionPerformed(evt);
+            }
+        });
+        jMenu1.add(VacunasMenu);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Procesos");
@@ -103,6 +112,11 @@ public class menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void VacunasMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VacunasMenuActionPerformed
+     frmVacunas = new Vacunas1();
+    frmVacunas.setVisible(true);
+    }//GEN-LAST:event_VacunasMenuActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -138,6 +152,7 @@ public class menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem VacunasMenu;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
