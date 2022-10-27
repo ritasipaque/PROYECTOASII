@@ -11,7 +11,7 @@ import Capa.Datos.Usuarios;
  *
  */
 public class menu extends javax.swing.JFrame {
-
+private Vacunas1 frmVacunas;
     Usuarios mod;
 
     public menu() {
@@ -43,6 +43,7 @@ public class menu extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        Vacunas_ = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
@@ -67,6 +68,8 @@ public class menu extends javax.swing.JFrame {
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jMenuBar1.setFocusTraversalPolicyProvider(true);
+        jMenuBar1.setFocusable(false);
         jMenuBar1.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
 
         jMenu1.setText("Mantenimientos");
@@ -75,6 +78,14 @@ public class menu extends javax.swing.JFrame {
 
         jMenuItem1.setText("jMenuItem1");
         jMenu1.add(jMenuItem1);
+
+        Vacunas_.setText("Vacunas");
+        Vacunas_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Vacunas_ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(Vacunas_);
 
         jMenuBar1.add(jMenu1);
 
@@ -103,6 +114,12 @@ public class menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Vacunas_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Vacunas_ActionPerformed
+    frmVacunas = new Vacunas1();
+    frmVacunas.setVisible(true);
+    //JDesktopPane_Escritorio.add(frmVacunas);
+    }//GEN-LAST:event_Vacunas_ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -138,6 +155,7 @@ public class menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Vacunas_;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;

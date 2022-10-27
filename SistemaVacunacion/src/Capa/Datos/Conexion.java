@@ -3,6 +3,7 @@ package Capa.Datos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,7 +12,7 @@ public class Conexion {
     
     private final String base = "bd_vacunacion";
     private final String user = "root";
-    private final String password = "";
+    private final String password = "12345";
     private final String url = "jdbc:mysql://localhost:3306/" + base;
     private Connection con = null;
     
@@ -30,5 +31,4 @@ public class Conexion {
         }
       return con;  
     }
-
 }
